@@ -13,10 +13,10 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent drop-shadow-xl">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
+          <div className="w-32 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8 shadow-lg"></div>
         </motion.div>
 
         <motion.div
@@ -26,13 +26,15 @@ const AboutSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 shadow-xl">
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+          <div className="bg-slate-800/80 backdrop-blur-lg rounded-3xl p-10 border border-purple-500/40 shadow-2xl shadow-purple-500/20">
+            <p className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8" 
+               style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)' }}>
               I'm a passionate Electronics and Communication Engineering student with a deep love for 
               technology and innovation. My journey in the world of development started with curiosity 
               and has evolved into a full-stack expertise spanning modern web technologies.
             </p>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+            <p className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8"
+               style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)' }}>
               When I'm not coding, you'll find me exploring new technologies, participating in hackathons, 
               or dreaming about the next big project. I believe in the power of technology to solve 
               real-world problems and create meaningful impact.
@@ -41,8 +43,9 @@ const AboutSection = () => {
               {['Problem Solver', 'Team Player', 'Quick Learner', 'Innovation Enthusiast'].map((trait) => (
                 <motion.span
                   key={trait}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-500/30 text-sm font-medium"
+                  className="px-6 py-3 bg-gradient-to-r from-purple-600/40 to-pink-600/40 backdrop-blur-sm rounded-full border border-purple-400/50 text-lg font-bold text-white shadow-xl"
                   whileHover={{ scale: 1.05 }}
+                  style={{ textShadow: '0 2px 6px rgba(0, 0, 0, 0.7)' }}
                 >
                   {trait}
                 </motion.span>
