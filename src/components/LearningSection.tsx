@@ -18,14 +18,14 @@ const LearningSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent drop-shadow-xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Currently Learning
           </h2>
-          <div className="w-32 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8 shadow-lg"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {currentlyLearning.map((tech, index) => (
               <motion.div
                 key={index}
@@ -36,16 +36,14 @@ const LearningSection = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="px-8 py-4 bg-slate-800/80 backdrop-blur-lg rounded-2xl border border-purple-400/50 shadow-2xl shadow-purple-500/20">
-                  <span className="text-white font-bold text-lg" style={{ textShadow: '0 2px 6px rgba(0, 0, 0, 0.7)' }}>
-                    {tech}
-                  </span>
+                <div className="px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                  <span className="text-white font-medium">{tech}</span>
                   <motion.div
-                    className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20"
+                    className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10"
                     animate={{ 
                       boxShadow: [
                         '0 0 0 0 rgba(139, 92, 246, 0.7)',
-                        '0 0 0 15px rgba(139, 92, 246, 0)',
+                        '0 0 0 10px rgba(139, 92, 246, 0)',
                       ]
                     }}
                     transition={{ duration: 2, repeat: Infinity }}
