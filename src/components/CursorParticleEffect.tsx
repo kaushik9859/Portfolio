@@ -9,7 +9,6 @@ interface Particle {
   life: number;
   maxLife: number;
   size: number;
-  color: string;
 }
 
 const CursorParticleEffect = () => {
@@ -33,24 +32,20 @@ const CursorParticleEffect = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle colors for variety
-    const colors = ['#8b5cf6', '#ec4899', '#06b6d4', '#10b981', '#f59e0b'];
-
     // Mouse move handler
     const handleMouseMove = (e: MouseEvent) => {
       mouseRef.current = { x: e.clientX, y: e.clientY };
       
       // Create new particles at cursor position
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 3; i++) {
         particlesRef.current.push({
-          x: e.clientX + (Math.random() - 0.5) * 30,
-          y: e.clientY + (Math.random() - 0.5) * 30,
-          vx: (Math.random() - 0.5) * 6,
-          vy: (Math.random() - 0.5) * 6,
-          life: 80,
-          maxLife: 80,
-          size: Math.random() * 4 + 1,
-          color: colors[Math.floor(Math.random() * colors.length)],
+          x: e.clientX + (Math.random() - 0.5) * 20,
+          y: e.clientY + (Math.random() - 0.5) * 20,
+          vx: (Math.random() - 0.5) * 4,
+          vy: (Math.random() - 0.5) * 4,
+          life: 60,
+          maxLife: 60,
+          size: Math.random() * 3 + 1,
         });
       }
     };
@@ -66,51 +61,41 @@ const CursorParticleEffect = () => {
         particle.y += particle.vy;
         particle.life--;
         
-        // Apply gentle gravity towards cursor
+        // Apply gravity towards cursor
         const dx = mouseRef.current.x - particle.x;
         const dy = mouseRef.current.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        if (distance < 150) {
-          const force = (150 - distance) / 150 * 0.15;
+        if (distance < 100) {
+          const force = (100 - distance) / 100 * 0.1;
           particle.vx += (dx / distance) * force;
           particle.vy += (dy / distance) * force;
         }
         
         // Add some friction
-        particle.vx *= 0.97;
-        particle.vy *= 0.97;
+        particle.vx *= 0.98;
+        particle.vy *= 0.98;
         
         // Calculate opacity based on life
-        const alpha = (particle.life / particle.maxLife) * 0.8;
+        const alpha = particle.life / particle.maxLife;
         
-        // Draw particle with enhanced glow
+        // Draw particle
         ctx.save();
         ctx.globalAlpha = alpha;
-        ctx.fillStyle = particle.color;
-        ctx.shadowBlur = 15;
-        ctx.shadowColor = particle.color;
-        
-        // Draw main particle
+        ctx.fillStyle = '#8b5cf6';
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = '#8b5cf6';
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
-        
-        // Draw inner glow
-        ctx.globalAlpha = alpha * 0.5;
-        ctx.shadowBlur = 25;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size * 1.5, 0, Math.PI * 2);
-        ctx.fill();
-        
         ctx.restore();
         
         return particle.life > 0;
       });
       
-      // Limit particle count for performance
-      if (particlesRef.current.length > 200) {
-        particlesRef.current = particlesRef.current.slice(-200);
+      // Limit particle count
+      if (particlesRef.current.length > 150) {
+        particlesRef.current = particlesRef.current.slice(-150);
       }
       
       animationRef.current = requestAnimationFrame(animate);
@@ -131,7 +116,7 @@ const CursorParticleEffect = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-20"
+      className="fixed inset-0 pointer-events-none z-10"
       style={{ mixBlendMode: 'screen' }}
     />
   );
