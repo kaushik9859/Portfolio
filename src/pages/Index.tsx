@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import HeroSection from '../components/HeroSection';
@@ -14,6 +13,7 @@ import ContactSection from '../components/ContactSection';
 import Navigation from '../components/Navigation';
 import ParticleBackground from '../components/ParticleBackground';
 import BackToTop from '../components/BackToTop';
+import CursorParticleEffect from '../components/CursorParticleEffect';
 
 const Index = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -27,6 +27,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
       <ParticleBackground />
+      <CursorParticleEffect />
       <Navigation />
       
       <motion.div
