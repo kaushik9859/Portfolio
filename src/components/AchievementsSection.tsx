@@ -5,14 +5,14 @@ const AchievementsSection = () => {
   const achievements = [
     {
       title: "Speech Competition",
-      description: "3rd Place in Inter-College Speech Competition",
-      icon: "🏆", // Updated to use the same icon for both
+      description: "3rd Place in College Speech Competition of NSS ",
+      icon: "🏆", 
       color: "from-yellow-400 to-orange-500"
     },
     {
       title: "Tug of War",
-      description: "3rd Place in Annual Sports Event",
-      icon: "🏆", // Updated to use the same icon for both
+      description: "3rd Place in Annual Sports Event of NSS",
+      icon: "🏆", 
       color: "from-blue-400 to-indigo-500"
     }
   ];

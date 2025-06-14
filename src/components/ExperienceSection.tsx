@@ -5,17 +5,17 @@ const ExperienceSection = () => {
   const experiences = [
     {
       title: "Core Member",
-      organization: "GDG Campus",
+      organization: "GDG on Campus",
       duration: "Sep 2024 - Present",
       description: "Volunteering to organize workshops, hackathons, and tech events while fostering a community of developers.",
-      logo: "🌐" // Replace this with the actual GDG logo if available
+      logo: "/assets/logos/gdgcLogo.png" // Path to the GDG logo in the public folder
     },
     {
       title: "Volunteer",
       organization: "National Service Scheme (NSS)",
       duration: "Sep 2023 - May 2025",
       description: "Actively participated in community service initiatives, awareness campaigns, and social welfare activities to contribute to societal development.",
-      logo: "🤝" // Replace this with the actual NSS logo if available
+      logo: "/assets/logos/nssLogo.jpg" // Path to the NSS logo in the public folder
     }
   ];
 
@@ -47,7 +47,13 @@ const ExperienceSection = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
             >
-              <div className="text-4xl mb-4">{exp.logo}</div>
+              <div className="mb-4 flex justify-center">
+                <img
+                  src={exp.logo}
+                  alt={`${exp.organization} Logo`}
+                  className="h-16 w-16 object-contain"
+                />
+              </div>
               <h3 className="text-xl font-bold text-white mb-2">{exp.title}</h3>
               <p className="text-purple-400 font-semibold mb-2">{exp.organization}</p>
               <p className="text-sm text-gray-400 mb-4">{exp.duration}</p>

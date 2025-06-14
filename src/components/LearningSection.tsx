@@ -1,11 +1,17 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SiNextdotjs, SiTypescript, SiPrisma, SiDocker, SiAwsamplify } from 'react-icons/si'; // Import relevant icons
+import { FaRobot, FaTools } from 'react-icons/fa'; // Import additional icons
 
 const LearningSection = () => {
   const currentlyLearning = [
-    "Next.js 14", "TypeScript", "Prisma ORM", "Docker", 
-    "Machine Learning", "DevOps", "AWS"
+    { name: "Next.js 14", icon: <SiNextdotjs className="text-black" /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+    { name: "Prisma ORM", icon: <SiPrisma className="text-indigo-500" /> },
+    { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
+    { name: "Machine Learning", icon: <FaRobot className="text-green-500" /> },
+    { name: "DevOps", icon: <FaTools className="text-gray-500" /> },
+    { name: "AWS", icon: <SiAwsamplify className="text-orange-500" /> },
   ];
 
   return (
@@ -36,15 +42,16 @@ const LearningSection = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-500/30 backdrop-blur-sm">
-                  <span className="text-white font-medium">{tech}</span>
+                <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                  <span className="text-2xl">{tech.icon}</span> {/* Icon */}
+                  <span className="text-white font-medium">{tech.name}</span> {/* Name */}
                   <motion.div
                     className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10"
-                    animate={{ 
+                    animate={{
                       boxShadow: [
                         '0 0 0 0 rgba(139, 92, 246, 0.7)',
                         '0 0 0 10px rgba(139, 92, 246, 0)',
-                      ]
+                      ],
                     }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
