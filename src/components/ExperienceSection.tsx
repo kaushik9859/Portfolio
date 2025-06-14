@@ -1,29 +1,21 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Technical Lead",
-      organization: "University Tech Club",
-      duration: "Sep 2023 - Present",
-      description: "Leading a team of 15+ developers in building innovative projects and organizing tech events.",
-      logo: "🚀"
+      title: "Core Member",
+      organization: "GDG Campus",
+      duration: "Sep 2024 - Present",
+      description: "Volunteering to organize workshops, hackathons, and tech events while fostering a community of developers.",
+      logo: "🌐" // Replace this with the actual GDG logo if available
     },
     {
-      title: "Frontend Developer Intern",
-      organization: "TechStart Solutions",
-      duration: "Jun 2023 - Aug 2023",
-      description: "Developed responsive web applications using React and collaborated with cross-functional teams.",
-      logo: "💻"
-    },
-    {
-      title: "Event Coordinator",
-      organization: "IEEE Student Branch",
-      duration: "Jan 2023 - Present",
-      description: "Organized technical workshops and seminars, coordinating with industry professionals.",
-      logo: "⚡"
+      title: "Volunteer",
+      organization: "National Service Scheme (NSS)",
+      duration: "Sep 2023 - May 2025",
+      description: "Actively participated in community service initiatives, awareness campaigns, and social welfare activities to contribute to societal development.",
+      logo: "🤝" // Replace this with the actual NSS logo if available
     }
   ];
 
@@ -43,7 +35,8 @@ const ExperienceSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-8"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Flexbox for row layout */}
+        <div className="flex flex-row justify-center items-center gap-8">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}

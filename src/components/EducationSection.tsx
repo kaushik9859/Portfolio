@@ -7,18 +7,25 @@ const EducationSection = () => {
     {
       degree: "Bachelor of Technology",
       field: "Electronics and Communication Engineering",
-      institution: "Your University",
-      year: "2021 - 2025",
-      distinction: "Current CGPA: 8.5/10",
+      institution: "NIT Silchar",
+      year: "2023 - 2027",
+      distinction: "Current CGPA: 8.61/10",
       description: "Specialized in digital systems, signal processing, and modern communication technologies."
     },
     {
       degree: "Higher Secondary",
       field: "Science Stream",
-      institution: "Your School",
-      year: "2019 - 2021",
-      distinction: "95.2%",
+      institution: "Lumding College",
+      year: "2021 - 2023",
+      distinction: "86.8%",
       description: "Strong foundation in Mathematics, Physics, and Chemistry."
+    },
+        {
+      degree: "Matriculation",
+      institution: "Saraswati Gurukul High School",
+      year: " 2021",
+      distinction: "94%",
+      description: "Strong foundation in Mathematics, Science, English,social science and Computer Science."
     }
   ];
 

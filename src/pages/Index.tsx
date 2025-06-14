@@ -53,7 +53,7 @@ const Index = () => {
       <footer className="relative py-8 text-center border-t border-purple-500/20">
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
         <div className="relative z-10">
-          <p className="text-gray-400">© 2024 Portfolio. Made with ❤️ and cosmic inspiration.</p>
+          <p className="text-gray-400">© 2025 Portfolio. Made with ❤️ and cosmic inspiration.</p>
         </div>
       </footer>
     </div>

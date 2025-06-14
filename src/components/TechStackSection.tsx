@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -15,7 +14,8 @@ const TechStackSection = () => {
     { name: "HTML5", icon: "🌐", color: "from-orange-400 to-red-400" },
     { name: "CSS3", icon: "🎨", color: "from-blue-400 to-blue-600" },
     { name: "Tailwind", icon: "💨", color: "from-cyan-400 to-blue-500" },
-    { name: "Git", icon: "📂", color: "from-orange-500 to-red-500" }
+    { name: "Git", icon: "📂", color: "from-orange-500 to-red-500" },
+    { name: "C++", icon: "💻", color: "from-gray-500 to-blue-500" } // Added C++
   ];
 
   return (
@@ -43,18 +43,16 @@ const TechStackSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
             >
-              <div className={`relative p-6 bg-gradient-to-br ${tech.color} rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:rotate-3`}>
+              <div
+                className={`relative p-6 bg-gradient-to-br ${tech.color} rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:ring-4 group-hover:ring-purple-500`}
+              >
                 <div className="text-center">
-                  <div className="text-4xl mb-3">{tech.icon}</div>
+                  <div className="text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {tech.icon}
+                  </div>
                   <h3 className="text-white font-bold text-sm">{tech.name}</h3>
-                </div>
-                
-                {/* Tooltip */}
-                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  {tech.name}
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-slate-800"></div>
                 </div>
               </div>
             </motion.div>

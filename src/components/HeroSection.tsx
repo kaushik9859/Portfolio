@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from '/public/assets/myImage.jpg'; // Adjust the path as necessary
 
 const HeroSection = () => {
   return (
@@ -15,7 +16,7 @@ const HeroSection = () => {
           <div className="relative inline-block">
             <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-purple-500 shadow-lg shadow-purple-500/50">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                src={Image}
                 alt="Profile"
                 className="w-full h-full object-cover"
               />

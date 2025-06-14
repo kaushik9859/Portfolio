@@ -1,32 +1,34 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image1 from '/public/assets/Projects/EcoClime.png';
+import Image2 from '/public/assets/Projects/Oikyotaan25.png';
+import Image3 from '/public/assets/Projects/audiophile.png'
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce application with payment integration, admin dashboard, and real-time inventory management.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+      title: "EcoClime",
+      description: "EcoClime is an AI/ML-powered agricultural solution that analyzes weather patterns, vegetation health, and soil data to recommend the best-suited crops for a location. It empowers farmers with actionable insights, enabling sustainable farming practices, improved productivity, and efficient resource management through advanced analytics and real-time data integration.",
+      tech: ["React", "vite", "Express", "Node.js", "MongoDB", "Streamlit"],
+      image: Image1, // Removed curly braces
+      liveLink: "https://ecoclime1.netlify.app/",
+      githubLink: "https://github.com/kaushik9859/Ecoclime1"
+    },
+    {
+      title: "Oikyotaan 25",
+      description: "Oikyotaan is the official website for the Bengali cultural fest of NIT Silchar. It serves as a comprehensive platform providing all necessary details about the event. The website includes dedicated sections for artist profiles, event schedules, a vibrant gallery, and team information. Visitors can explore detailed descriptions of events, ensuring they have a clear understanding of the fest's offerings. Oikyotaan celebrates Bengali culture and fosters community engagement through its user-friendly and visually appealing interface.",
+      tech: ["Next.js", "TypeScript", "Tailwind"],
+      image: Image2, // Removed curly braces
       liveLink: "#",
       githubLink: "#"
     },
     {
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with real-time data visualization and automated reporting.",
-      tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
-      liveLink: "#",
-      githubLink: "#"
-    },
-    {
-      title: "AI Chat Assistant",
-      description: "Intelligent chatbot with natural language processing capabilities and context-aware responses.",
-      tech: ["React", "Python", "OpenAI API", "Flask"],
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=500&h=300&fit=crop",
-      liveLink: "#",
-      githubLink: "#"
+      title: "AudioPhile",
+      description: "Audiophile is a sleek and modern audiobook streaming platform designed to provide users with an engaging and intuitive interface. Built with a focus on user experience, the platform allows users to browse, search, and explore a wide range of audiobooks. While it currently contains only the frontend, Audiophile showcases responsive design, seamless navigation, and visually appealing layouts, making it an ideal foundation for a full-fledged audiobook streaming service in the future",
+      tech: ["HTML", "CSS", "JavaScript"],
+      image: Image3,
+      liveLink: "https://audiophile-one-ochre.vercel.app/",
+      githubLink: "https://github.com/kaushik9859/Audiophile"
     }
   ];
 

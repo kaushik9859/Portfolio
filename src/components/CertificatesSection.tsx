@@ -5,28 +5,28 @@ import { motion } from 'framer-motion';
 const CertificatesSection = () => {
   const certificates = [
     {
-      name: "React Developer Certificate",
-      issuer: "Meta",
-      image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=400&h=300&fit=crop",
-      link: "#"
+      name: "Front-end Web Development",
+      issuer: "Infosys Springboard",
+      image: "https://i0.wp.com/opportunitycell.com/wp-content/uploads/2023/01/a477211cb8f419d6c048f962aa2ebd38.jpg?fit=700%2C467&ssl=1",
+      link: "https://drive.google.com/file/d/1wBTdGQt1TGmGEdEjurEq0KB-XFsyxNoo/view"
     },
     {
-      name: "Full Stack Web Development",
-      issuer: "FreeCodeCamp",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop",
-      link: "#"
+      name: "Prompt Engineering",
+      issuer: "DeepLearning.AI",
+      image: "https://www.udacity.com/blog/wp-content/uploads/2021/03/AI-vs-Deep-Learning_Blog-scaled.jpeg",
+      link: "https://learn.deeplearning.ai/accomplishments/e38ef3a5-36df-4620-9290-6b1f9e83ef6a?usp=sharing"
     },
     {
-      name: "JavaScript Algorithms",
-      issuer: "Coursera",
-      image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=300&fit=crop",
-      link: "#"
+      name: "Bring AI Work Workshop",
+      issuer: "Google Workspace",
+      image: "https://www.milesweb.com/blog/wp-content/uploads/2025/02/what-is-google-workspace.png",
+      link: "https://drive.google.com/file/d/1QtuyzcUWGE9u87K0uzZjLKjI7xEwFun4/view?usp=drive_link"
     },
     {
-      name: "Cloud Computing Fundamentals",
-      issuer: "AWS",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop",
-      link: "#"
+      name: "UI/UX Design",
+      issuer: "GDGC NIT Silchar",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb9bTiy2jTG_brAspNUlyMGrsGnlSO-fMRdA&s",
+      link: "http://certificate.givemycertificate.com/c/1f749724-25b7-4e6b-b299-d259be3e36af"
     }
   ];
 

@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 const LearningSection = () => {
   const currentlyLearning = [
-    "Next.js 14", "TypeScript", "Prisma ORM", "Docker", "Kubernetes", 
-    "Machine Learning", "DevOps", "System Design", "GraphQL", "AWS"
+    "Next.js 14", "TypeScript", "Prisma ORM", "Docker", 
+    "Machine Learning", "DevOps", "AWS"
   ];
 
   return (
