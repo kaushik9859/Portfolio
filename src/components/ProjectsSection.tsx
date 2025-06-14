@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image1 from '/public/assets/Projects/EcoClime.png';
-import Image2 from '/public/assets/Projects/Oikyotaan25.png';
+import Image2 from '/public/assets/Projects/oikyotaan25.png';
 import Image3 from '/public/assets/Projects/audiophile.png'
 
 const ProjectsSection = () => {
