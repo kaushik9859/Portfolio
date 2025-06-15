@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+
 import ecoclimeImage from '../assets/Projects/ecoclime1.png';
 import oikyotaanImage from '../assets/Projects/oikyotaan25.png';
 import audiophileImage from '../assets/Projects/audiophile.png';
+
 
 const ProjectsSection = () => {
   const projects = [
