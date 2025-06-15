@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image1 from '/public/assets/Projects/ecoclime.png';
-import Image2 from '/public/assets/Projects/oikyotaan25.png';
-import Image3 from '/public/assets/Projects/audiophile.png'
+import ecoclimeImage from '../assets/Projects/ecoclime1.png';
+import oikyotaanImage from '../assets/Projects/oikyotaan25.png';
+import audiophileImage from '../assets/Projects/audiophile.png';
 
 const ProjectsSection = () => {
   const projects = [
@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       title: "EcoClime",
       description: "EcoClime is an AI/ML-powered agricultural solution that analyzes weather patterns, vegetation health, and soil data to recommend the best-suited crops for a location. It empowers farmers with actionable insights, enabling sustainable farming practices, improved productivity, and efficient resource management through advanced analytics and real-time data integration.",
       tech: ["React", "vite", "Express", "Node.js", "MongoDB", "Streamlit"],
-      image: Image1, // Removed curly braces
+      image: ecoclimeImage,
       liveLink: "https://ecoclime1.netlify.app/",
       githubLink: "https://github.com/kaushik9859/Ecoclime1"
     },
@@ -18,15 +18,15 @@ const ProjectsSection = () => {
       title: "Oikyotaan 25",
       description: "Oikyotaan is the official website for the Bengali cultural fest of NIT Silchar. It serves as a comprehensive platform providing all necessary details about the event. The website includes dedicated sections for artist profiles, event schedules, a vibrant gallery, and team information. Visitors can explore detailed descriptions of events, ensuring they have a clear understanding of the fest's offerings. Oikyotaan celebrates Bengali culture and fosters community engagement through its user-friendly and visually appealing interface.",
       tech: ["Next.js", "TypeScript", "Tailwind"],
-      image: Image2, // Removed curly braces
-      liveLink: "#",
-      githubLink: "#"
+      image: oikyotaanImage,
+      liveLink: "https://oikyotaan.in/",
+      githubLink: "https://github.com/gdsc-nits-org/Oikyotaan25"
     },
     {
       title: "AudioPhile",
       description: "Audiophile is a sleek and modern audiobook streaming platform designed to provide users with an engaging and intuitive interface. Built with a focus on user experience, the platform allows users to browse, search, and explore a wide range of audiobooks. While it currently contains only the frontend, Audiophile showcases responsive design, seamless navigation, and visually appealing layouts, making it an ideal foundation for a full-fledged audiobook streaming service in the future",
       tech: ["HTML", "CSS", "JavaScript"],
-      image: Image3,
+      image: audiophileImage,
       liveLink: "https://audiophile-one-ochre.vercel.app/",
       githubLink: "https://github.com/kaushik9859/Audiophile"
     }

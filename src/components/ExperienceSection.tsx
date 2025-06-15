@@ -1,24 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import gdgcLogo from '../assets/logos/gdgcLogo.png'; // Adjust the path based on the file location
+import nssLogo from '../assets/logos/nssLogo.jpg';  // Adjust the path based on the file location
+
+const experiences = [
+  {
+    title: "Core Member",
+    organization: "GDG on Campus",
+    duration: "Sep 2024 - Present",
+    description: "Volunteering to organize workshops, hackathons, and tech events while fostering a community of developers.",
+    logo: gdgcLogo // Use the imported GDG logo
+  },
+  {
+    title: "Volunteer",
+    organization: "National Service Scheme (NSS)",
+    duration: "Sep 2023 - May 2025",
+    description: "Actively participated in community service initiatives, awareness campaigns, and social welfare activities to contribute to societal development.",
+    logo: nssLogo // Use the imported NSS logo
+  }
+];
 
 const ExperienceSection = () => {
-  const experiences = [
-    {
-      title: "Core Member",
-      organization: "GDG on Campus",
-      duration: "Sep 2024 - Present",
-      description: "Volunteering to organize workshops, hackathons, and tech events while fostering a community of developers.",
-      logo: "/assets/logos/gdgcLogo.png" // Path to the GDG logo in the public folder
-    },
-    {
-      title: "Volunteer",
-      organization: "National Service Scheme (NSS)",
-      duration: "Sep 2023 - May 2025",
-      description: "Actively participated in community service initiatives, awareness campaigns, and social welfare activities to contribute to societal development.",
-      logo: "/assets/logos/nssLogo.jpg" // Path to the NSS logo in the public folder
-    }
-  ];
-
   return (
     <section id="experience" className="relative py-20 z-10">
       <div className="container mx-auto px-6">

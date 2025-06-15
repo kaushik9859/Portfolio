@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from '/public/assets/myImage.jpg'; // Adjust the path as necessary
+import Image from '../assets/myImage.jpg'; // Adjust the path as necessary
 
 const HeroSection = () => {
   return (
