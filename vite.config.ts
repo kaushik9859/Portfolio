@@ -23,4 +23,17 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase the limit to 1000 kB
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'], // Split vendor libraries
+        },
+      },
+      external: [
+        '/public/assets/Projects/ecoclime.png', // Add the file here
+      ],
+    },
+  },
 }));
